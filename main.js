@@ -30,7 +30,7 @@ window.onload = async function() {
 
   d = new Date();
   console.log("[" + d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds() + "][main] post test message to worker1");
-  worker1.postMessage(ui8a.buffer);
+  worker1.postMessage(ui8a.buffer, [ui8a.buffer]);
   d = new Date();
   console.log("[" + d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds() + "][main] test message to worker1 has posted");
 

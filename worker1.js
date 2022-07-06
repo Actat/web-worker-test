@@ -7,7 +7,7 @@ onmessage = function(e) {
 
   d = new Date();
   console.log("[" + d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds() + "][worker1] worker1 return response");
-  postMessage(e.data);
+  postMessage(e.data, [e.data]);
   d = new Date();
   console.log("[" + d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds() + "][worker1] worker1 has returned response");
 }
